@@ -1,0 +1,220 @@
+/*#region setup*/
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+:root {
+	--color-main: #0066ff;
+	--color-muted: #f8f8f8;
+	--color-text-main: #333333;
+	--color-text-muted: #757575;
+	--color-border-main: #0056d7;
+	--color-border-muted: #d8d8d8;
+	font-size: 9px;
+}
+@media (min-width: 375px) {
+	:root {
+		font-size: 10px;
+	}
+}
+body {
+	font-family: "Mulish", sans-serif;
+	color: var(--color-text-base);
+}
+button {
+	cursor: pointer;
+}
+ul {
+	list-style: none;
+}
+img {
+	max-width: 100%;
+	display: block;
+}
+/*#endregion setup*/
+/*#region container*/
+.container {
+	display: grid;
+	grid-template-columns: 1fr;
+}
+@media (min-width: 1024px) {
+	.container {
+		grid-template-columns: auto 1fr;
+	}
+}
+/*#endregion container*/
+/*#region container*/
+.sidebar {
+	display: none;
+}
+@media (min-width: 1024px) {
+	.sidebar {
+		display: block;
+	}
+}
+/*#region sidebar*/
+/*#region content*/
+.content {
+	width: 60%;
+	margin: 4rem auto;
+}
+/*#endregion*/
+/*#region not-registered*/
+.not-registered {
+	font-size: 1.2rem;
+	text-align: right;
+	margin-bottom: 105px;
+}
+.not-registered__register {
+	font-weight: bold;
+	color: var(--color-main);
+	text-decoration: underline;
+}
+/*#endregion*/
+/*#region form*/
+.form {
+	max-width: 100%;
+	width: 350px;
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+	gap: 20px;
+}
+.form__welcome {
+	color: var(--color-text-muted);
+	font-size: 1.4rem;
+	margin-bottom: 3px;
+}
+.form__title {
+	font-weight: bold;
+	font-size: 2.2rem;
+	margin-bottom: 30px;
+}
+/*#region input*/
+.input {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+.input__label {
+	font-size: 1.2rem;
+	font-weight: 600;
+}
+.input__container {
+	flex: 1;
+	position: relative;
+}
+.input__element {
+	width: 100%;
+	height: 40px;
+	padding: 0 12px;
+	background-color: var(--color-muted);
+	border: 1px solid var(--color-border-muted);
+	border-radius: 4px;
+	outline-color: var(--color-border-main);
+}
+.input__eye {
+	background-color: transparent;
+	border: none;
+	position: absolute;
+	right: 12px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.input__element::placeholder {
+	color: var(--color-text-muted);
+}
+/*#endregion*/
+.form__submit {
+	padding: 9px 14px;
+	height: 45px;
+	color: white;
+	font-weight: bold;
+	font-size: 1.6rem;
+	background-color: var(--color-main);
+	border-radius: 4px;
+	border: 1px solid var(--color-border-main);
+}
+.form__forget-password {
+	font-size: 1.2rem;
+	color: var(--color-main);
+	text-decoration: underline;
+}
+/*#endregion*/
+/*#region divider*/
+.divider {
+	color: var(--color-text-muted);
+	font-size: 1.2rem;
+	position: relative;
+	text-align: center;
+}
+.divider::before {
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 1px;
+	background-color: #f0f0f0;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: -2;
+}
+.divider::after {
+	position: absolute;
+	content: "";
+	width: 1.75em;
+	height: 100%;
+	background-color: white;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	z-index: -1;
+}
+/*#endregion*/
+/*#region sign-in-as*/
+.sign-in-as__label {
+	font-weight: 600;
+	font-size: 1.2rem;
+	margin-bottom: 10px;
+}
+.sign-in-as__list {
+	display: flex;
+	gap: 10px;
+}
+.sign-in-as__item {
+	border-radius: 4px;
+	padding: 8px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0px 4px 5px 0px #0000000d;
+}
+@media (min-width: 375px) {
+	.sign-in-as__item {
+		width: 40px;
+		height: 40px;
+	}
+}
+.sign-in-as__item--gmail {
+	background-color: white;
+	border: 1px solid #ececec;
+	box-shadow: none;
+}
+.sign-in-as__item--microsoft {
+	background-color: #303030;
+	border-color: #ececec;
+}
+.sign-in-as__item--yahoo {
+	background-color: #9b11b1;
+}
+.sign-in-as__item--apple {
+	background-color: black;
+}
+.sign-in-as__item--facebook {
+	background-color: #3580f0;
+}
+/*#endregion*/

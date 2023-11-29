@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./style.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&family=Outfit:wght@400;700&display=swap"
+			rel="stylesheet" />
+		<title>HTML/CSS Test</title>
+	</head>
+	<body>
+		<div class="container">
+			<aside class="sidebar">
+				<img src="./public/left-side-panel.png" alt="side-image" />
+			</aside>
+			<main class="content">
+				<p class="not-registered">
+					Not registered? <a class="not-registered__register" href="/">Create an account</a>
+				</p>
+				<form class="form">
+					<div>
+						<p class="form__welcome">Welcome back! 👋</p>
+						<h1 class="form__title">Login to your account</h1>
+					</div>
+					<div class="input">
+						<label class="input__label" for="email">Email</label>
+						<div class="input__container">
+							<input
+								class="input__element"
+								type="email"
+								name="email"
+								id="email"
+								placeholder="Please enter your email" />
+						</div>
+					</div>
+					<div class="input">
+						<label class="input__label" for="password">Password</label>
+						<div class="input__container">
+							<button class="input__eye" type="button">
+								<img src="/public/eye.svg" alt="eye" />
+							</button>
+							<input
+								class="input__element"
+								type="password"
+								name="password"
+								id="password"
+								placeholder="Enter password" />
+						</div>
+					</div>
+					<button class="form__submit" type="submit">Login</button>
+					<a class="form__forget-password" href="/">Forget Password?</a>
+					<div class="divider">Or</div>
+					<div class="sign-in-as">
+						<p class="sign-in-as__label">Login using</p>
+						<ul class="sign-in-as__list">
+							<li>
+								<a class="sign-in-as__item sign-in-as__item--gmail" href="/">
+									<img src="/public/google-logo.svg" alt="gmail logo" />
+								</a>
+							</li>
+							<li>
+								<a class="sign-in-as__item sign-in-as__item--microsoft" href="">
+									<img src="/public/microsoft-logo.svg" alt="microsoft logo" />
+								</a>
+							</li>
+							<li>
+								<a class="sign-in-as__item sign-in-as__item--yahoo" href="">
+									<img src="/public/yahoo-logo.svg" alt="yahoo logo" />
+								</a>
+							</li>
+							<li>
+								<a class="sign-in-as__item sign-in-as__item--apple" href="">
+									<img src="/public/apple-logo.svg" alt="apple logo" />
+								</a>
+							</li>
+							<li>
+								<a class="sign-in-as__item sign-in-as__item--facebook" href="">
+									<img src="/public/facebook-logo.svg" alt="facebook logo" />
+								</a>
+							</li>
+						</ul>
+					</div>
+				</form>
+			</main>
+		</div>
+	</body>
+</html>
